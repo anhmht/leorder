@@ -1,0 +1,101 @@
+@import "../MainContent.scss";
+@import "../MainContent.scss";
+$common-border-color: rgba(252, 218, 88, 1);
+.carousel-container {
+  .ant-carousel {
+    $crs-height: 90vh;
+    .slick-slider {
+      .slick-dots {
+        li, li.slick-active {
+          button {
+            background: #00000057;
+          }
+        }
+      }
+    }
+    .slick-slide {
+      text-align: center;
+      height: $crs-height;
+      overflow: hidden;
+      .item-content {
+        height: $crs-height;
+        position: relative;
+        .item-description {
+          position: absolute;
+          top: 92px;
+          left: 12px;
+          width: 6em;
+          background: #4c49496b;
+          padding: 12px;
+          color: white;
+          font-size: 3em;
+          z-index: 1;
+          text-align: left;
+          border: 2px solid transparent;
+          -webkit-transition: all .5s; /* Safari */
+          transition: all .5s;
+          cursor: pointer;
+          @media only screen and (orientation: portrait) {
+            top: 96px;
+            font-size: 2em;
+          }
+          &:hover, &.wm-guide {
+            border-color: $common-border-color;
+          }
+        }
+        .item-bg {
+          position: relative;
+          height: 100%;
+          background-size: cover !important;
+          @media only screen and (orientation: portrait) {
+            background-size: 200% !important;
+          }
+          background-repeat: no-repeat !important;
+          background-position: center !important;
+          .cs-navigation-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            cursor: pointer;
+            $common-guide-bg: #2f2f2f70;
+            .cs-prev {
+              flex: 1;
+              border: 2px solid transparent;
+            }
+            .cs-next {
+              flex: 1;
+              border: 2px solid transparent;
+            }
+            .cs-prev, .cs-next {
+              &.wm-guide {
+                border-color: $common-border-color;
+                background: $common-guide-bg;
+                position: relative;
+                .guide-label {
+                  display: block;
+                }
+              }
+              .guide-label {
+                @media only screen and (orientation: portrait) {
+                  font-size: 1em;
+                  top: 48%;
+                  left: 36%;
+                  color: $common-border-color; 
+                }
+                display: none;
+                position: absolute;
+                top: 38%;
+                left: 46%;
+                color: white;
+                font-weight: 600;
+                font-size: 2em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,30 @@
+.ant-layout-sider-zero-width-trigger {
+  z-index: 2;
+  top: 0;
+}
+.header-container {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  text-align: center;
+  background: none;
+  padding: 0;
+  height: auto;
+  .header-title {
+    font-family: 'Gugi', cursive;
+    margin: 16px;
+    font-weight: 600;
+    font-size: 3em;
+    -webkit-transition: all .5s; /* Safari */
+    transition: all .5s;
+    &.header-bg {
+      background: rgba(252, 218, 88, .8);
+    }
+  }
+  @media only screen and (orientation: portrait) {
+    .header-title {
+      font-size: 2.5em;
+    }
+  }
+}
