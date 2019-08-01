@@ -1,0 +1,8 @@
+{
+  "s3": {
+    "key": "AKIAJSULEROPXGXBZCVA",
+    "secret": "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",
+    "bucket": "testwhammybar",
+    "region": "ap-southeast-1"
+  }
+}

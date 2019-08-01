@@ -1,0 +1,63 @@
+{
+    "env": {
+      "es6": true,
+      "browser": true,
+      "node": true,
+      "meteor": true
+    },
+  
+    "extends": [
+      "airbnb",
+      "plugin:meteor/recommended",
+      "plugin:jsx-a11y/recommended"
+    ],
+    "parser": "babel-eslint",
+    "plugins": [
+      "react",
+      "meteor",
+      "jsx-a11y"
+    ],
+  
+    "parserOptions": {
+      "ecmaFeatures": {
+        "globalReturn": true,
+        "generators": false,
+        "objectLiteralDuplicateProperties": false,
+        "experimentalObjectRestSpread": true,
+        "jsx": true
+      },
+      "ecmaVersion": 2017,
+      "sourceType": "module"
+    },
+  
+    "globals": {
+      "Meteor": true,
+      "Roles": true,
+      "SubsCache": true,
+      "browser": true,
+      "server": true,
+      "async": true,
+      "Migrations": true,
+      "numeral": true
+    },
+  
+    "rules": {
+      "semi": "warn",
+      "no-underscore-dangle":["off"],
+      "no-undef": "error",
+      "import/no-extraneous-dependencies": "off",
+      "import/no-absolute-path": "off",
+      "import/no-unresolved": "off",
+      "import/extensions": ["off", "never"],
+      "jsx-a11y/href-no-hash": "off",
+      "jsx-a11y/click-events-have-key-events": "off",
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "linebreak-style": 0,
+      "global-require": 0,
+      "no-param-reassign": 0,
+      "max-len": 0,
+      "import/prefer-default-export": "off",
+      "comma-dangle": 0
+    }
+  }
+  
