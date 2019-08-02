@@ -1,15 +1,15 @@
 module.exports = {
   servers: {
     one: {
-      host: '178.128.100.231',
+      host: '174.138.21.71',
       username: 'root',
-      pem: '~/.ssh/id_rsa'
+      pem: '~/.ssh/id_rsa',
     }
   },
 
   app: {
     // TODO: change app name and path
-    name: 'whammy-hypebeast',
+    name: 'leOrder',
     path: '../',
 
     servers: {
@@ -23,8 +23,8 @@ module.exports = {
     env: {
       // TODO: Change to your app's url
       // If you are using ssl, it needs to start with https://
-      ROOT_URL: 'https://richkid.club',
-      MONGO_URL: 'mongodb://admin:abc123@ds149146.mlab.com:49146/hyperbeast'
+      ROOT_URL: 'http://leorder.xyz',
+      MONGO_URL: 'mongodb+srv://admin:admin123@cluster0-gcqvt.mongodb.net/admin?retryWrites=true&w=majority'
       //MONGO_OPLOG_URL: 'mongodb://mongodb/local'
     },
 
