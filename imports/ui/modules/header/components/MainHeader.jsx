@@ -32,77 +32,29 @@ class MainHeader extends React.PureComponent {
   state = {
   };
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  }
-
-  handleScroll = () => {
-    const scrollTop = window.pageYOffset;
-
-    this.setState({
-      headerBg: !scrollTop ? '' : 'header-bg'
-    });
-  };
-
-  handleRegister = () => {
-    const { openModalWizard } = this.props;
-
-    openModalWizard(MODAL_WIZARDS.ADD_USER, {
-      modalProps: {
-        width: 650,
-      }
-    });
-  }
-
-  handleLogin = () => {
-    const { openModalWizard, role } = this.props;
-
-    openModalWizard(MODAL_WIZARDS.LOGIN, {
-      role,
-      modalProps: {
-        width: 500,
-      }
-    });
-  }
-
-  handleLogout =() => {
-    Meteor.logout();
-  }
-
   render() {
-    const { userId, userData } = this.props;
-    const { headerBg } = this.state;
-    const fullName = `${_get(userData, 'profile.firstName', '')} ${_get(userData, 'profile.lastName', '')}`;
     return (
       <div>
         <Header className="header-container">
-          <div className={`header-title ${headerBg}`}>rich-kid.club</div>
-          {
-            userId
-              ? (
-                <React.Fragment>
-                  <Avatar src={userData.profile.avatar ? userData.profile.avatar : null} shape="square" size={64} icon="user" />
-                  {fullName}
-                  <Button onClick={() => this.handleLogout()}>
-                    {'Logout'}
-                  </Button>
-                </React.Fragment>
-              )
-              : (
-                <React.Fragment>
-                  <Button onClick={() => this.handleLogin()}>
-                    {'Login'}
-                  </Button>
-                  <Button onClick={() => this.handleRegister()}>
-                    {'Register'}
-                  </Button>
-                </React.Fragment>
-              )
-          }
+          <div className="main-header">
+            <div className="header-logo">
+              <img alt="leorder-log" src="assets/img/Logo_LeOrder_01.png" />
+            </div>
+            <div className="header-menu">
+              <div className="main-menu">
+                <a className="main-menu-link" href="#">Hướng dẫn</a> {/*eslint-disable-line */}
+                {' | '}
+                <a className="main-menu-link" href="#">Dịch vụ</a> {/*eslint-disable-line */}
+                {' | '}
+                <a className="main-menu-link" href="#">Đăng nhập / Đăng ký</a> {/*eslint-disable-line */}
+              </div>
+              <div className="menu-button">
+                <Button icon="shopping-cart">
+                  Kiểm tra đơn hàng
+                </Button>
+              </div>
+            </div>
+          </div>
         </Header>
       </div>
     );

@@ -34,13 +34,6 @@ class MainLayout extends React.PureComponent {
           </Layout>
           <MainFooter />
         </Layout>
-        <MessengerCustomerChat
-          pageId="1330430287107877"
-          appId="1191480251034518"
-          themeColor="#fedc59"
-          loggedInGreeting="Hi! Mình đang có Nike Earth Day Collection, bạn muốn sở hữu bộ sưu tập không?"
-          loggedOutGreeting="Hi! Mình đang có Nike Earth Day Collection, bạn muốn sở hữu bộ sưu tập không?"
-        />
       </div>
     );
   }

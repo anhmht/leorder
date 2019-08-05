@@ -1,5 +1,5 @@
 {
-  "name": "whammy-hypebeast",
+  "name": "leorder",
   "private": true,
   "scripts": {
     "start": "meteor run --settings settings.json -p 3000",

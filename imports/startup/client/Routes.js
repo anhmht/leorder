@@ -1,8 +1,10 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { ConnectedRouter } from 'connected-react-router';
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 import { history } from '../../ui/reducers/store/configStore';
 import { ROUTER_PATHS } from '../../../lib/enums/general';
+import HomePage from '../../ui/modules/mainContent/components/carouselContent/HomePage';
 import CarouselContent from '../../ui/modules/mainContent/components/carouselContent/CarouselContent';
 import DetailObj from '../../ui/modules/mainContent/components/detailObj/DetailObj';
 import AdminLayout from '../../ui/modules/adminLayout/components/AdminLayout';
@@ -24,9 +26,14 @@ const Admin = () => (
 const Main = () => (
   <MainLayout>
     <Switch>
-      <Route exact path={ROUTER_PATHS.MAIN_HOMEPAGE} component={CarouselContent} />
-      <Route exact path={ROUTER_PATHS.DETAIL_PAGE} component={DetailObj} />
+      <Route exact path={ROUTER_PATHS.MAIN_HOMEPAGE} component={HomePage} />
     </Switch>
+    <MessengerCustomerChat
+      pageId="376839595842757"
+      appId="419255595205415"
+      themeColor="#ef9f1b"
+      loggedOutGreeting="Xin chào! Chúng tôi có thể giúp gì được cho bạn?"
+    />
   </MainLayout>
 );
 

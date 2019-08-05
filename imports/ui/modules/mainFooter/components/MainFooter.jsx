@@ -17,7 +17,7 @@ class MainFooter extends React.PureComponent {
     return (
       <div>
         <Footer className="layout-footer">
-          Whammy.RichKID ©2019 WM-tech
+          {/* Whammy.RichKID ©2019 WM-tech */}
         </Footer>
       </div>
     );

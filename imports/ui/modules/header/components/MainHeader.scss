@@ -3,14 +3,59 @@
   top: 0;
 }
 .header-container {
-  position: fixed;
   width: 100%;
   z-index: 1;
   top: 0;
-  text-align: center;
   background: none;
   padding: 0;
   height: auto;
+  .main-header {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    .header-logo {
+      width: fit-content;
+      float: left;
+      img {
+        width: 15em;
+        padding: 16px;
+      }
+    }
+    .header-menu {
+      -webkit-flex: 1;  /* Safari 6.1+ */
+      -ms-flex: 1;  /* IE 10 */  
+      flex: 1;
+      display: flex;
+      display: -webkit-flex; /* Safari */
+      align-items: center;
+      .main-menu{
+        -webkit-flex: 1;  /* Safari 6.1+ */
+        -ms-flex: 1;  /* IE 10 */  
+        flex: 1;
+        text-align: right;
+        padding: 16px;
+        .main-menu-link {
+          padding: 10px;
+          font-size: 1.2em;
+          color: #000;
+        }
+        .main-menu-link:hover {
+          color: #79bec5;
+        }
+      }
+      .menu-button{
+        padding: 16px;
+        .ant-btn {
+          border-radius: 0px;
+          border: 2px solid #79bec5;
+          color: #79bec5;
+          height: 50px;
+        }
+      }
+    }
+  }
+  
   .header-title {
     font-family: 'Gugi', cursive;
     margin: 16px;

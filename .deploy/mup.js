@@ -1,7 +1,7 @@
 module.exports = {
   servers: {
     one: {
-      host: '174.138.21.71',
+      host: '167.71.196.23',
       username: 'root',
       pem: '~/.ssh/id_rsa',
     }
@@ -24,7 +24,7 @@ module.exports = {
       // TODO: Change to your app's url
       // If you are using ssl, it needs to start with https://
       ROOT_URL: 'http://leorder.xyz',
-      MONGO_URL: 'mongodb+srv://admin:admin123@cluster0-gcqvt.mongodb.net/admin?retryWrites=true&w=majority'
+      MONGO_URL: 'mongodb+srv://admin:admin123@cluster0-gcqvt.mongodb.net/leorder?authSource=admin'
       //MONGO_OPLOG_URL: 'mongodb://mongodb/local'
     },
 
